@@ -1,0 +1,70 @@
+'''
+
+apple = 49
+man= 3
+b= 0
+while apple>=man:
+    apple = apple - man #apple  is 46개
+    b+=1
+
+print(f'남은사과는 {apple}입니다.')
+print(f'꺼낸횟수는 {b}입니다.')
+'''
+'''
+apple = 49
+man = 3
+b=0
+while apple>=man:
+    apple -=man
+    b+=1
+print(f'남은사과는 {apple}입니다.')
+print(f"꺼낸 수는 {b}입니다.")   
+'''
+#보드게임 코드
+b=0
+BOARD= [ [1,2,3],
+             [3,0,5],
+             [6,7,8] ]
+#화면에 보드 상태 보여주기
+print(BOARD[0])
+print(BOARD[1])
+print(BOARD[2])
+
+r=1
+c=1
+while b<=10000:
+        key=input("WASD 키 중에 하나 입력")
+#만약 key값이 D와 같다면
+    #BOARD[2][2]와 BOARD[2][1]를 서로 바꾸기
+        if key == 'D' :
+            BOARD[r][c+1],BOARD[r][c] = BOARD[r][c],BOARD[r][c+1]
+            r=r
+            c=c+1
+            print(BOARD[0])
+            print(BOARD[1])
+            print(BOARD[2])
+    
+        if key == 'A' :
+            BOARD[r][c-1],BOARD[r][c] = BOARD[r][c],BOARD[r][c-1]
+            r=r
+            c=c-1
+            print(BOARD[0])
+            print(BOARD[1])
+            print(BOARD[2])
+
+        if key == 'W' :
+            BOARD[r-1][c],BOARD[r][c] = BOARD[r][c],BOARD[r-1][c]
+            r=r-1
+            c=c
+            print(BOARD[0])
+            print(BOARD[1])
+            print(BOARD[2])
+            
+        if key == 'S' :
+            BOARD[r+1][c],BOARD[r][c] = BOARD[r][c],BOARD[r+1][c]
+            r=r+1
+            c=c
+            print(BOARD[0])
+            print(BOARD[1])
+            print(BOARD[2])
+
