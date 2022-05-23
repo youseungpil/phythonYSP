@@ -1,0 +1,28 @@
+##가위바위보 게임## (최종본)
+import random
+
+p=0
+c=0
+a=["가위","바위","보"]
+
+while p!=4 and c!=4:
+    com=random.chioce(a)
+    me=input("무엇을 선택?")
+
+    if com==me:
+        print("무승부")
+
+    elif (com=="가위" and me=="바위") or (com=="바위" and me=="보") or (com=="보" and me=="가위"):
+        print("플레이어 승리")
+        p+=1
+
+    else:
+        print("컴퓨터 승리")
+        c+=1
+
+    print("플레이어 : " , p , "컴퓨터 : ", c)
+
+if p<c:
+    print("컴퓨터가 이겼습니다")
+else:
+    print("플레이어가 이겼습니다")
