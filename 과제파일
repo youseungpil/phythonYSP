@@ -1,0 +1,10 @@
+x = int(input("가로 길이 : "))
+y = int(input("세로 길이 : "))
+result = x*y
+print("사각형의 넓이는" , result , "입니다")
+
+for i in range(y): #y번 반복
+    for j in range(x): #x번 반복
+        print("□",end="") #정사각형을 출력하고 줄바꿈을 하지 않음
+    print()
+
