@@ -1,0 +1,16 @@
+## 기말고사에서는 while로 문제낼수있음##
+def 사각형가로출력(n):
+    for i in range(n):
+        print("a",end="")
+    print()
+
+def 넓이에맞는사각형출력(a,b):
+    for i in range(a):
+        사각형가로출력(b)
+    print();print();print()
+
+r= int(input("넓이 입력:"))
+
+for i in range(1,r+1):
+    if r%i==0 and i*i <= r: ## i의제곱은 r보다 작은값만 추출함
+          넓이에맞는사각형출력(i,r//i)
