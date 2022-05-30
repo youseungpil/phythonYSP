@@ -1,4 +1,5 @@
 ## 기말고사에서는 while로 문제낼수있음##
+## 1번 예상문제 넓이에 맞는 사각형을 가로세로 값 중복없이 출력하기##
 def 사각형가로출력(n):
     for i in range(n):
         print("a",end="")
@@ -14,3 +15,30 @@ r= int(input("넓이 입력:"))
 for i in range(1,r+1):
     if r%i==0 and i*i <= r: ## i의제곱은 r보다 작은값만 추출함
           넓이에맞는사각형출력(i,r//i)
+
+#숫자야구게임##
+import random
+
+st=0
+c=0
+a=[]
+while len(a)<3:
+     r=str(random.randint(0,9))
+     if not(r in a):
+        a.append(r)
+
+while st<3:
+    st=0
+    ba=0
+    o=0
+    r=str(input("세개의 숫자를 입력하시오(ex:123) : "))
+    for i in range(0,3):
+        for x in range(0,3):
+             if r[i]==a[x] and i==x:
+                st+=1
+             elif r[i]==a[x] and i!=x:
+                ba+=1
+    o=3-(ba+st)
+    print(f'스트라이크:{st}, 볼:{ba}, 아웃{o}')
+    c+=1
+print("정답입니다. 시도횟수 : ",c)
