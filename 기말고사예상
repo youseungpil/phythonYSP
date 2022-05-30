@@ -16,7 +16,7 @@ for i in range(1,r+1):
     if r%i==0 and i*i <= r: ## i의제곱은 r보다 작은값만 추출함
           넓이에맞는사각형출력(i,r//i)
 
-#숫자야구게임##
+## 2번 예상문제 숫자야구게임##
 import random
 
 st=0
@@ -42,3 +42,32 @@ while st<3:
     print(f'스트라이크:{st}, 볼:{ba}, 아웃{o}')
     c+=1
 print("정답입니다. 시도횟수 : ",c)
+
+## 3번예상문제가위바위보 게임## 
+import random
+
+p=0
+c=0
+a=["가위","바위","보"]
+
+while p!=4 and c!=4:
+    com=random.chioce(a)
+    me=input("무엇을 선택?")
+
+    if com==me:
+        print("무승부")
+
+    elif (com=="가위" and me=="바위") or (com=="바위" and me=="보") or (com=="보" and me=="가위"):
+        print("플레이어 승리")
+        p+=1
+
+    else:
+        print("컴퓨터 승리")
+        c+=1
+
+    print("플레이어 : " , p , "컴퓨터 : ", c)
+
+if p<c:
+    print("컴퓨터가 이겼습니다")
+else:
+    print("플레이어가 이겼습니다")
