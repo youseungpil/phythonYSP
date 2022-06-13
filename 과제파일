@@ -37,3 +37,13 @@ if p<c:
     print("컴퓨터가 이겼습니다")
 else:
     print("플레이어가 이겼습니다")
+
+
+##최소공배수##
+a = int(input("첫번째 자연수 입력:"))
+b = int(input("첫번째 보다 큰 자연수 입력:"))
+
+for i in range(b,(a*b)+1): ## b에서 (a*b)+1한 값만 큼 반복
+    if i%a==0 and i%b==0: ## 만약 i를 각각a와b로 나눈값이 0이되면(a,b둘다 0일때 and조건)
+        print(i)          ##i값을 출력 (최소공배수)
+        break            ## print(i)값이 실행되면 그만할것!!
