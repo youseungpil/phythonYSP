@@ -12,3 +12,4 @@ for i in range(b,(a*b)+1): ## b에서 (a*b)+1한 값만 큼 반복실행
         print(i)          ##i값을 출력 (최소공배수값)
 
         break            ## print(i)값이 실행되면 그만할것!!
+'
